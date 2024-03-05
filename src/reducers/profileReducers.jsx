@@ -1,6 +1,6 @@
 import { actions } from "../actions";
 
-const initialState = {
+export const initialState = {
     user: null,
     posts: [],
     loading: false,
@@ -21,6 +21,13 @@ const profileReducers = (state, action) => {
                 loading: false,
                 user: action.data.user,
                 posts: action.data.posts,
+            };
+        }
+        case actions.profile.USER_DATA_EDITED: {
+            return {
+                ...state,
+                loading: false,
+                user: action.data,
             };
         }
         case actions.profile.DATA_FETCH_ERROR: {

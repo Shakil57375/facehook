@@ -21,6 +21,7 @@ const LoginForm = () => {
       );
       if (response.status === 200) {
         const { token, user } = response.data;
+        console.log(response.data)
         if (token) {
           const authToken = token.token;
           const refreshToken = token.refreshToken;
