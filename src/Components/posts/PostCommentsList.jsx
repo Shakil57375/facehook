@@ -3,7 +3,7 @@ import React from "react";
 const PostCommentsList = ({ comments }) => {
     return (
         <div className="space-y-4 divide-y divide-lighterDark pl-2 lg:pl-3">
-            {comments.map((singleComment) => (
+            {comments && comments.map((singleComment) => (
                 <div
                     key={singleComment?.id}
                     className="flex items-center gap-3 pt-4"
