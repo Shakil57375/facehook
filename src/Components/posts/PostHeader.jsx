@@ -3,13 +3,15 @@ import EditIcons from "../../assets/icons/edit.svg";
 import DeleteIcons from "../../assets/icons/delete.svg";
 import TimeIcon from "../../assets/icons/time.svg";
 import { getDateDifferenceFromNow } from "../../utils";
+import useAvatar from "../../hooks/useAvatar/useAvatar";
 const PostHeader = ({ post }) => {
+  const {avatarURL} = useAvatar(post)
     return (
         <header className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
                 <img
                     className="max-w-10 max-h-10 rounded-full lg:max-h-[58px] lg:max-w-[58px]"
-                    src="./assets/images/avatars/avatar_1.png"
+                    src={avatarURL}
                     alt="avatar"
                 />
                 <div>
