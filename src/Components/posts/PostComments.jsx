@@ -1,9 +1,10 @@
+import { useState } from "react";
 import useAvatar from "../../hooks/useAvatar/useAvatar";
 import PostCommentsList from "./PostCommentsList";
 
 const PostComments = ({ post }) => {
     const { avatarURL } = useAvatar(post);
-
+    const [showPostComments, setShowPostComments] = useState(false);
     return (
         <div>
             <div className="flex-center mb-3 gap-2 lg:gap-4">
@@ -24,12 +25,15 @@ const PostComments = ({ post }) => {
                 </div>
             </div>
             <div className="mt-4">
-                <button className="text-gray-300 max-md:text-sm">
+                <button
+                    onClick={() => setShowPostComments(!showPostComments)}
+                    className="text-gray-300 max-md:text-sm"
+                >
                     All Comment ▾
                 </button>
             </div>
 
-            <PostCommentsList comments={post?.comments} />
+            {showPostComments && <PostCommentsList comments={post?.comments} />}
         </div>
     );
 };
