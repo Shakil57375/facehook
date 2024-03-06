@@ -60,6 +60,36 @@
             "name": "Saad Hasan",
             "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
           }
+        },
+        {
+          "id": "e4033928-b7df-43e9-8ba8-bd229245145a",
+          "comment": "nice",
+          "createdAt": "2024-03-06T08:48:41.020Z",
+          "author": {
+            "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+            "name": "Saad Hasan",
+            "avatar": "uploads/avatar/avatar-1709658761681-724524938.jpg"
+          }
+        },
+        {
+          "id": "38412099-16c3-4e16-adcb-7c06a2f4ba41",
+          "comment": "nice-2",
+          "createdAt": "2024-03-06T08:48:50.529Z",
+          "author": {
+            "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+            "name": "Saad Hasan",
+            "avatar": "uploads/avatar/avatar-1709658761681-724524938.jpg"
+          }
+        },
+        {
+          "id": "2cd8a709-7400-41b0-9525-6f88ef1f22ff",
+          "comment": "nice-2",
+          "createdAt": "2024-03-06T08:49:26.353Z",
+          "author": {
+            "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+            "name": "Saad Hasan",
+            "avatar": "uploads/avatar/avatar-1709658761681-724524938.jpg"
+          }
         }
       ],
       "likes": [
@@ -106,6 +136,16 @@
             "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
             "name": "Saad Hasan",
             "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
+          }
+        },
+        {
+          "id": "be110541-1e7e-45fb-b7f4-43bf1b762f02",
+          "comment": "good",
+          "createdAt": "2024-03-06T08:49:38.271Z",
+          "author": {
+            "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+            "name": "Saad Hasan",
+            "avatar": "uploads/avatar/avatar-1709658761681-724524938.jpg"
           }
         }
       ],
@@ -251,7 +291,28 @@
         "name": "Tapas Adhikary",
         "avatar": "uploads/avatar/avatar-1708770640883-148182382.png"
       },
-      "comments": [],
+      "comments": [
+        {
+          "id": "c9bfebfd-0ffd-40cf-9b0d-3e2279eda6e3",
+          "comment": "book lover",
+          "createdAt": "2024-03-06T08:54:26.273Z",
+          "author": {
+            "id": "94802039-745e-42b0-84b3-7e7e30c375e8",
+            "name": "hlw Hossian",
+            "avatar": "uploads/avatar/avatar-1709715227369-497758960.jpg"
+          }
+        },
+        {
+          "id": "c22dd0bf-b4c0-4e98-9b20-432e5ab5c3f8",
+          "comment": "book lover 22",
+          "createdAt": "2024-03-06T08:54:57.817Z",
+          "author": {
+            "id": "94802039-745e-42b0-84b3-7e7e30c375e8",
+            "name": "hlw Hossian",
+            "avatar": "uploads/avatar/avatar-1709715227369-497758960.jpg"
+          }
+        }
+      ],
       "likes": [
         "94802039-745e-42b0-84b3-7e7e30c375e8"
       ],
@@ -536,7 +597,7 @@
       "password": "$2b$08$LZ3k9fKV.HI2bqfiSu1KPOvF7rxsF1IYiUsHnT3s7r/hLrMVZ.RIe",
       "firstName": "hlw",
       "lastName": "Hossian",
-      "avatar": "uploads/avatar/avatar-1709706211928-891147611.jpg",
+      "avatar": "uploads/avatar/avatar-1709715227369-497758960.jpg",
       "email": "jabed@gamil.com"
     },
     {
