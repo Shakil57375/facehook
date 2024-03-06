@@ -514,6 +514,23 @@
       "avatar": "uploads/avatar/avatar-1708802845791-219561000.png",
       "email": "rambo@email.com",
       "bio": "I am Rambo!!!"
+    },
+    {
+      "id": "8a88377e-20ce-4b97-b4c0-a6f9fffef6a0",
+      "password": "$2b$08$bQIN/WOI29N2q87nR0s2Vum7fJaHCl9lgn0JbSV047684da3JaoMu",
+      "firstName": "Shakil",
+      "lastName": "Hossian",
+      "avatar": "uploads/avatar/avatar-1709703244195-154208147.jpg",
+      "email": "shakil57@gmail.com",
+      "bio": "ffffffffffffffffff"
+    },
+    {
+      "id": "94802039-745e-42b0-84b3-7e7e30c375e8",
+      "password": "$2b$08$LZ3k9fKV.HI2bqfiSu1KPOvF7rxsF1IYiUsHnT3s7r/hLrMVZ.RIe",
+      "firstName": "hlw",
+      "lastName": "Hossian",
+      "avatar": null,
+      "email": "jabed@gamil.com"
     }
   ]
 }
