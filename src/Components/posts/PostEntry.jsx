@@ -1,17 +1,18 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth/useAuth";
 import useAxios from "../../hooks/useAxios/useAxios";
-import AddPhoto from "../../assets/icons/addPhoto.svg"
+import AddPhoto from "../../assets/icons/addPhoto.svg";
 import { usePost } from "../../hooks/usePost/usePost";
 import useProfile from "../../hooks/useProfile/useProfile";
 import Field from "../common/Field";
+import { actions } from "../../actions";
 
 const PostEntry = ({ onCreate }) => {
     const { auth } = useAuth();
     const { dispatch } = usePost();
     const { api } = useAxios();
     const { state: profile } = useProfile();
-    const user = profile?.user ?? auth?.user
+    const user = profile?.user ?? auth?.user;
     const {
         register,
         handleSubmit,
@@ -19,9 +20,21 @@ const PostEntry = ({ onCreate }) => {
         setError,
     } = useForm();
 
-    const handlePostSubmit = (formData) =>{
-        console.log(formData)
-    }
+    const handlePostSubmit = async (formData) => {
+        dispatch({ type: actions.post.DATA_FETCHING });
+        try {
+            const response = await api.post(
+                `${import.meta.env.VITE_SERVER_BASE_URL}/posts`,
+                { formData }
+            );
+            if(response.status === 200){
+                dispatch({type : actions.post.DATA_CREATED, data: response.data})
+                onCreate()
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     return (
         <div className="card relative">
