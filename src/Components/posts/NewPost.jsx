@@ -4,7 +4,6 @@ import useAuth from "../../hooks/useAuth/useAuth";
 const NewPost = () => {
     const [showPostEntry, setShowPostEntry] = useState(false);
     const { auth } = useAuth();
-
     return (
         <>
             {showPostEntry ? (
