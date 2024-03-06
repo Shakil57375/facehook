@@ -90,6 +90,16 @@
             "name": "Saad Hasan",
             "avatar": "uploads/avatar/avatar-1709658761681-724524938.jpg"
           }
+        },
+        {
+          "id": "b6b04669-3341-481f-bb17-114799a6bcd1",
+          "comment": "nice",
+          "createdAt": "2024-03-06T09:43:20.646Z",
+          "author": {
+            "id": "94802039-745e-42b0-84b3-7e7e30c375e8",
+            "name": "hlw Hossian",
+            "avatar": "uploads/avatar/avatar-1709718177975-705580911.jpg"
+          }
         }
       ],
       "likes": [
@@ -142,6 +152,16 @@
           "id": "be110541-1e7e-45fb-b7f4-43bf1b762f02",
           "comment": "good",
           "createdAt": "2024-03-06T08:49:38.271Z",
+          "author": {
+            "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+            "name": "Saad Hasan",
+            "avatar": "uploads/avatar/avatar-1709658761681-724524938.jpg"
+          }
+        },
+        {
+          "id": "2ee1e48f-3da5-47cd-b91f-ec884b35ac27",
+          "comment": "nice all",
+          "createdAt": "2024-03-06T09:38:13.998Z",
           "author": {
             "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
             "name": "Saad Hasan",
@@ -617,7 +637,7 @@
       "password": "$2b$08$LZ3k9fKV.HI2bqfiSu1KPOvF7rxsF1IYiUsHnT3s7r/hLrMVZ.RIe",
       "firstName": "hlw",
       "lastName": "Hossian",
-      "avatar": "uploads/avatar/avatar-1709715227369-497758960.jpg",
+      "avatar": "uploads/avatar/avatar-1709718177975-705580911.jpg",
       "email": "jabed@gamil.com"
     },
     {
