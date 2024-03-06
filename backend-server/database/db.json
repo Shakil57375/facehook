@@ -529,7 +529,7 @@
       "password": "$2b$08$LZ3k9fKV.HI2bqfiSu1KPOvF7rxsF1IYiUsHnT3s7r/hLrMVZ.RIe",
       "firstName": "hlw",
       "lastName": "Hossian",
-      "avatar": null,
+      "avatar": "uploads/avatar/avatar-1709706211928-891147611.jpg",
       "email": "jabed@gamil.com"
     },
     {
@@ -539,6 +539,14 @@
       "lastName": "Hossian",
       "avatar": null,
       "email": "sojib@gmail.com"
+    },
+    {
+      "id": "786ac1d0-2d31-4ab1-9e63-73b053052131",
+      "password": "$2b$08$xSfgTcfx1.8agZGUJcDWy.lrOepZpQRG4kEw2Hhw4r69oF60Yhyya",
+      "firstName": "Shakil",
+      "lastName": "Hossian",
+      "avatar": null,
+      "email": "sojib1@gmail.com"
     }
   ]
 }

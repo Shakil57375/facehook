@@ -6,11 +6,22 @@ import Logout from "../auth/Logout";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth/useAuth";
 import useProfile from "../../hooks/useProfile/useProfile";
+import { useState, useEffect } from "react";
+import { useRandomImage } from "../../hooks/useRandomImage/useRandomImage";
 
 const Header = () => {
     const { auth } = useAuth();
     const { state } = useProfile();
+    const [randomImage, setRandomImage] = useState("");
     const user = state?.user ?? auth?.user;
+    const randomImg = useRandomImage();
+    const size = randomImg.length;
+
+    useEffect(() => {
+        const imageIndex = Math.floor(size * Math.random());
+        setRandomImage(imageIndex);
+    }, [size]);
+
     return (
         <nav className="sticky top-0 z-50 border-b border-[#3F3F3F] bg-[#1E1F24] py-4">
             <div className="container flex flex-col items-center justify-between gap-6 sm:flex-row">
@@ -30,18 +41,20 @@ const Header = () => {
                     <button className="icon-btn">
                         <img src={Notification} alt="Notification" />
                     </button>
-
                     <Logout />
-
                     <Link to="/me" className="flex-center !ml-8 gap-3">
                         <span className="text-lg font-medium lg:text-xl">
                             {user?.firstName} {user?.lastName}
                         </span>
                         <img
                             className="max-h-[32px] max-w-[32px] lg:max-h-[44px] lg:max-w-[44px] rounded-full"
-                            src={`${import.meta.env.VITE_SERVER_BASE_URL}/${
+                            src={
                                 user.avatar
-                            }`}
+                                    ? `${
+                                          import.meta.env.VITE_SERVER_BASE_URL
+                                      }/${user.avatar}`
+                                    : randomImg[randomImage]
+                            }
                             alt="avatar"
                         />
                     </Link>
