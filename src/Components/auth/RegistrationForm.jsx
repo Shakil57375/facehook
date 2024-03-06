@@ -21,10 +21,17 @@ const RegistrationForm = () => {
                 navigate("/login");
             }
         } catch (error) {
-            setError("root.random", {
-                type: "random",
-                message: `Something went wrong: ${error.message}`,
-            });
+            if (error.response.status === 500) {
+                setError("root.random", {
+                    type: "random",
+                    message: `Email already exists`,
+                });
+            } else {
+                setError("root.random", {
+                    type: "random",
+                    message: `Something went wrong: ${error.message}`,
+                });
+            }
         }
     };
     return (

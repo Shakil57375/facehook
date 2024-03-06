@@ -531,6 +531,14 @@
       "lastName": "Hossian",
       "avatar": null,
       "email": "jabed@gamil.com"
+    },
+    {
+      "id": "0709ce0a-a924-4e83-a4ee-f1c5adb8b880",
+      "password": "$2b$08$N1CR40MwHeNS4RQvsaJ8XuoHRXeHRxGIyhBscfyDWjuOyxJKhYjtS",
+      "firstName": "Shakil",
+      "lastName": "Hossian",
+      "avatar": null,
+      "email": "sojib@gmail.com"
     }
   ]
 }
