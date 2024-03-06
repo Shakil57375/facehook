@@ -1,28 +1,36 @@
 import React from "react";
+import { getDateDifferenceFromNow } from "../../utils";
 
 const PostCommentsList = ({ comments }) => {
+    comments.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     return (
         <div className="space-y-4 divide-y divide-lighterDark pl-2 lg:pl-3">
-            {comments && comments.map((singleComment) => (
-                <div
-                    key={singleComment?.id}
-                    className="flex items-center gap-3 pt-4"
-                >
-                    <img
-                        className="max-w-6 max-h-6 rounded-full"
-                        src={`${import.meta.env.VITE_SERVER_BASE_URL}/${
-                            singleComment?.author?.avatar
-                        }`}
-                        alt="avatar"
-                    />
-                    <div>
-                        <div className="flex gap-1 text-xs lg:text-sm">
-                            <span>{singleComment?.author?.name}: </span>
-                            <span>{singleComment.comment}</span>
+            {comments &&
+                comments.map((singleComment) => (
+                    <div
+                        key={singleComment?.id}
+                        className="flex items-center gap-3 pt-4"
+                    >
+                        <img
+                            className="max-w-6 max-h-6 rounded-full"
+                            src={`${import.meta.env.VITE_SERVER_BASE_URL}/${
+                                singleComment?.author?.avatar
+                            }`}
+                            alt="avatar"
+                        />
+                        <div>
+                            <div className="flex gap-1 text-xs lg:text-sm">
+                                <span>{singleComment?.author?.name}: </span>
+                                <span>{singleComment?.comment}</span>
+                                <span className="text-[10px] text-gray-600">
+                                    {`${getDateDifferenceFromNow(
+                                        singleComment?.createdAt
+                                    )} ago`}
+                                </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
         </div>
     );
 };

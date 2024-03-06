@@ -11,7 +11,6 @@ export const getDateDifferenceFromNow = (fromDate) => {
     let minuteDifference = Math.floor(difference * 60);  // Calculate the whole number of minutes
     difference = difference * 60 - minuteDifference; // Remove the minutes from the difference
 
-
     let message = '';
 
     if (dayDifference > 0) {
