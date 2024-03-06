@@ -22,20 +22,30 @@ const PostEntry = ({ onCreate }) => {
 
     const handlePostSubmit = async (formData) => {
         dispatch({ type: actions.post.DATA_FETCHING });
+
         try {
             const response = await api.post(
                 `${import.meta.env.VITE_SERVER_BASE_URL}/posts`,
                 { formData }
             );
-            if(response.status === 200){
-                dispatch({type : actions.post.DATA_CREATED, data: response.data})
-                onCreate()
+
+            if (response.status === 200) {
+                dispatch({
+                    type: actions.post.DATA_CREATED,
+                    data: response.data,
+                });
+                alert("post added")
+                // Close this UI
+                onCreate();
             }
         } catch (error) {
-            console.log(error);
+            console.error(error);
+            dispatch({
+                type: actions.post.DATA_FETCH_ERROR,
+                error: response.error,
+            });
         }
     };
-
     return (
         <div className="card relative">
             <h6 className="mb-3 text-center text-lg font-bold lg:text-xl">

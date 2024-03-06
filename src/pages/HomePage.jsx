@@ -8,6 +8,7 @@ import NewPost from "../Components/posts/NewPost";
 const HomePage = () => {
     const { api } = useAxios();
     const { state, dispatch } = usePost();
+    state.posts.sort((a,b) => new Date(b.createAt) - new Date(a.createAt))
     useEffect(() => {
         dispatch({ type: actions.post.DATA_FETCHING });
         const fetchPost = async () => {
